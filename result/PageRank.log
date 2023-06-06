@@ -1,0 +1,208 @@
+1. PageRank:
+
+root@localhost:/opt/grasp/trace-based-simulators# make clean; make POLICY=grasp;
+rm -rf *.bin
+/usr/bin/g++ -std=c++11  -o grasp.bin grasp.cpp
+/opt/grasp/trace-based-simulators/grasp.bin /opt/grasp/datasets/PageRankOpt.web-Google.cvgr.dbg.lru.llc.trace 1
+                     Cache Property                Value
+                    cache size (MB)                    1
+                 cache size (Bytes)              1048576
+                               sets                 1024
+                         num_blocks                16384
+                              Assoc                   16
+                          set_shift                   10
+                        block_shift                    6
+
+                             Region                Value
+                      grasp-disable                    0
+                       grasp-enable                    0
+                        propertyA-0             84877056
+                        propertyA-1             84877072
+                        propertyA-f                   50
+                        propertyA-n             99539904
+                        propertyB-0             31462080
+                        propertyB-1             31462081
+                        propertyB-f                   50
+                        propertyB-n             32378508
+
+                    Property Region          Size(bytes)           Size(frac)
+                          propertyA               524288             0.500000
+                          propertyB               524288             0.500000
+
+              Cache Capcity (Bytes)              1048576
+              Used Capacity (Bytes)              1048576
+                 Utilization (Frac)           100.000000
+
+                   Total Addresses:              9887515
+                     Elements read:              9887515
+
+
+              Grasp is initialized!
+           Num bits per cache block                    3
+           Worst Insertion Position                    7
+    Intermediate Insertion Position                    6
+        Priority Insertion Position                    1
+    Priority Hit-Promotion Position                    0
+
+------------------------------------------------------------------
+                    total-accesses:    9887515
+                      total-misses:    6397965
+------------------------------------------------------------------
+                         miss-rate:   0.647075
+------------------------------------------------------------------
+
+
+
+root@localhost:/opt/grasp/trace-based-simulators# make clean; make POLICY=lru;
+rm -rf *.bin
+/usr/bin/g++ -std=c++11  -o lru.bin lru.cpp
+/opt/grasp/trace-based-simulators/lru.bin /opt/grasp/datasets/PageRankOpt.web-Google.cvgr.dbg.lru.llc.trace 1
+                     Cache Property                Value
+                    cache size (MB)                    1
+                 cache size (Bytes)              1048576
+                               sets                 1024
+                         num_blocks                16384
+                              Assoc                   16
+                          set_shift                   10
+                        block_shift                    6
+
+                             Region                Value
+                      grasp-disable                    0
+                       grasp-enable                    0
+                        propertyA-0             84877056
+                        propertyA-1             84877072
+                        propertyA-f                   50
+                        propertyA-n             99539904
+                        propertyB-0             31462080
+                        propertyB-1             31462081
+                        propertyB-f                   50
+                        propertyB-n             32378508
+
+                    Property Region          Size(bytes)           Size(frac)
+                          propertyA               524288             0.500000
+                          propertyB               524288             0.500000
+
+              Cache Capcity (Bytes)              1048576
+              Used Capacity (Bytes)              1048576
+                 Utilization (Frac)           100.000000
+
+                   Total Addresses:              9887515
+                     Elements read:              9887515
+
+
+                LRU is initialized!
+
+------------------------------------------------------------------
+                    total-accesses:    9887515
+                      total-misses:    8687691
+------------------------------------------------------------------
+                         miss-rate:   0.878653
+------------------------------------------------------------------
+
+
+
+
+
+root@localhost:/opt/grasp/trace-based-simulators# make clean; make POLICY=pin;
+rm -rf *.bin
+/usr/bin/g++ -std=c++11  -o pin.bin pin.cpp
+/opt/grasp/trace-based-simulators/pin.bin /opt/grasp/datasets/PageRankOpt.web-Google.cvgr.dbg.lru.llc.trace 1
+                     Cache Property                Value
+                    cache size (MB)                    1
+                 cache size (Bytes)              1048576
+                               sets                 1024
+                         num_blocks                16384
+                              Assoc                   16
+                          set_shift                   10
+                        block_shift                    6
+
+                             Region                Value
+                      grasp-disable                    0
+                       grasp-enable                    0
+                        propertyA-0             84877056
+                        propertyA-1             84877072
+                        propertyA-f                   50
+                        propertyA-n             99539904
+                        propertyB-0             31462080
+                        propertyB-1             31462081
+                        propertyB-f                   50
+                        propertyB-n             32378508
+
+                    Property Region          Size(bytes)           Size(frac)
+                          propertyA               524288             0.500000
+                          propertyB               524288             0.500000
+
+              Cache Capcity (Bytes)              1048576
+              Used Capacity (Bytes)              1048576
+                 Utilization (Frac)           100.000000
+
+                   Total Addresses:              9887515
+                     Elements read:              9887515
+
+
+                PIN is initialized!
+
+
+------------------------------------------------------------------
+                    total-accesses:    9887515
+                      total-misses:    7488700
+------------------------------------------------------------------
+                         miss-rate:   0.757389
+------------------------------------------------------------------
+
+
+
+
+
+
+root@localhost:/opt/grasp/trace-based-simulators# make clean; make POLICY=belady;
+rm -rf *.bin
+/usr/bin/g++ -std=c++11  -o belady.bin belady.cpp
+/opt/grasp/trace-based-simulators/belady.bin /opt/grasp/datasets/PageRankOpt.web-Google.cvgr.dbg.lru.llc.trace 1
+                     Cache Property                Value
+                    cache size (MB)                    1
+                 cache size (Bytes)              1048576
+                               sets                 1024
+                         num_blocks                16384
+                              Assoc                   16
+                          set_shift                   10
+                        block_shift                    6
+
+                             Region                Value
+                      grasp-disable                    0
+                       grasp-enable                    0
+                        propertyA-0             84877056
+                        propertyA-1             84877072
+                        propertyA-f                   50
+                        propertyA-n             99539904
+                        propertyB-0             31462080
+                        propertyB-1             31462081
+                        propertyB-f                   50
+                        propertyB-n             32378508
+
+                    Property Region          Size(bytes)           Size(frac)
+                          propertyA               524288             0.500000
+                          propertyB               524288             0.500000
+
+              Cache Capcity (Bytes)              1048576
+              Used Capacity (Bytes)              1048576
+                 Utilization (Frac)           100.000000
+
+                   Total Addresses:              9887515
+                     Elements read:              9887515
+
+
+             Belady is initialized!
+
+
+
+Belady future index is generated. Running second pass now.
+
+
+------------------------------------------------------------------
+                    total-accesses:    9887515
+                      total-misses:    5583826
+------------------------------------------------------------------
+                         miss-rate:   0.564735
+------------------------------------------------------------------
+
