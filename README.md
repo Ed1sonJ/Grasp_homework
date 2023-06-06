@@ -13,3 +13,5 @@ cd ${DBG_ROOT}/trace-based-simulators
 2. 修改trace-based-simulators/Makefile，去选择运行的dataset，执行下述命令
 
 make clean; make POLICY=grasp;
+
+3. 运行的结果放在了trace-based-simulators/result下
